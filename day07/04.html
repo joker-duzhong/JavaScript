@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>asdasd ad adas as a</h1>
+    <p>asd asd asd <i>asda asd dsda</i> ad as  asdas</p>
+    <script>
+        const myPara = document.querySelector('p')
+        // afterbegin,beforebegin,beforeend,afterend
+        myPara.insertAdjacentHTML('afterbegin','<i>title</i>')
+        myPara.insertAdjacentHTML('beforebegin','<i>title</i>')
+        myPara.insertAdjacentHTML('beforeend','<p>title</p>')
+        myPara.insertAdjacentHTML('beforeend','dasds ad adasd ;asds')
+        console.log(myPara.innerHTML)
+        console.log(myPara.outerHTML)
+
+        // 只访问文本内容
+        console.log(myPara.textContent)
+        console.log(document.documentElement.textContent)
+
+        console.log(myPara.innerText)
+    </script>
+</body>
+</html>

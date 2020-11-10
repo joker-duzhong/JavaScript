@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let strHTML = `
+        <ul>
+        <li>java</li>
+        <li>python</li>
+        <li>JavaScript</li>
+        <li>swift</li>
+    </ul>`
+        document.body.innerHTML = strHTML
+        const oList = document.querySelector('ul')
+        console.log(oList.innerHTML)
+
+        //古老的方式
+
+        const oFrag = document.createDocumentFragment()
+
+        const createElement = (element, text) => {
+            let oItem = document.createElement(element)
+            let oText = document.createTextNode(text)
+            oItem.appendChild(oText)
+            oElement.appendChild(oItem)
+            // document.body.appendChild(oElement)
+        }
+
+        let oElement = document.createElement('ul')
+        let oItem = document.createElement('li')
+        let oText = document.createTextNode('java')
+        oItem.appendChild(oText)
+        oElement.appendChild(oItem)
+        document.body.appendChild(oElement)
+
+        createElement('li','python')
+        createElement('li','asdsa')
+        createElement('li','gfdg')
+        createElement('li','swrit')
+        oFrag.appendChild(oElement)
+        document.body.appendChild(oFrag)
+    </script>
+</body>
+
+</html>

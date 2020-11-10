@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <ul class="lstBooks" id="lstBooks">
+        <li class="book">python</li>
+        <li>java</li>
+        <li class="book">andriod</li>
+        <li>JavaScript</li>
+        <style>
+            #lstBooks .book{
+                border: red 1px solid;
+            }
+            #lstBooks :nth-child(3){
+                color: red;
+            }
+            #lstBooks{
+                background-color: aqua;
+            }
+            #lstBooks1{
+                background-color: rgb(246, 251, 199);
+            }
+        </style>
+    </ul>
+    <script>
+        // const oList = document.querySelector('.lstBooks')
+        // console.log(oList.innerHTML)
+        // console.log(oList.nodeType)
+        // console.log(oList.nodeName)
+        // console.log(oList.nodeValue)
+        // console.log(oList.firstChild.nodeType)
+        // console.log(oList.firstElementChild.nodeType)//第一个元素子节点
+
+        // console.log(document.doctype.nextSibling.innerHTML)
+        // console.log(document.doctype.nextSibling.firstElementChild.innerHTML)
+
+        // console.log(document.documentElement.nodeName)
+        // console.log(document.body.nodeName)
+
+        //通过id访问元素
+        // const oList1 = document.getElementById('.litBooks')
+        
+        // const oList2 = document.getElementsByTagName('li')
+        // console.log(oList2.length)
+        // const Otem = document.getElementsByClassName('lstBooks')
+        // console.log(Otem.length)
+        // oList1.removeChild(oList1.lastChild)
+        // console.log(oList1.length)
+
+        //通过查询选择器
+        // const te = document.querySelector('.lstBooks')
+        // const te1 = document.querySelector('#lstBooks .book') //相同的节点，则返回第一个节点
+        // console.log(te1.innerHTML)
+        
+        // const oLists = document.querySelectorAll('#lstBooks .book')
+        // console.log(oLists.length)
+        // const oList = document.querySelector('#lstBooks')
+        // oList.removeChild(document.querySelector('#lstBooks :nth-child(3)'))
+        // //不改变原数组
+        // console.log(oLists.length) 
+
+        //设置和改变元素的值
+        const oListS = document.querySelector('#lstBooks')
+        console.log(oListS.getAttribute('id'))
+        oListS.setAttribute('id','lstBooks1')
+
+        //创建动态标记
+    </script>
+</body>
+</html>

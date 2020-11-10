@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>java</li>
+        <li>python</li>
+        <li>javascript</li>
+        <li>swtip</li>
+    </ul>
+    <script>
+        const oList = document.querySelector('ul')
+        console.log(oList.parentNode)//父节点
+        console.log(oList.parentElement)//父元素
+
+        console.log(oList.childNodes)
+        console.log(oList.children)
+        // 只访问第一个元素
+        console.log(oList.firstChild)
+        console.log(oList.firstElementChild)
+        // 访问最后一个元素
+        console.log(oList.lastElementChild)
+        // 访问相邻的元素
+        console.log(oList.firstElementChild.nextElementSibling)
+        console.log(oList.lastElementChild.previousElementSibling)
+        // 节点de 数目
+        console.log(oList.childNodes.length)
+        console.log(oList.childElementCount)
+    </script>
+</body>
+</html>
