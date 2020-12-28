@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件传播机制</title>
+</head>
+<body>
+    <div id="box">test</div>
+
+    <script>
+        const oDiv = document.querySelector("#box")
+        window.addEventListener('click',()=>{
+            console.log(`==> window 捕获阶段`)
+        },true)
+        document.addEventListener('click',()=>{
+            console.log(`==> document 捕获阶段`)
+        },true)
+        document.documentElement.addEventListener('click',()=>{
+            console.log(`==> HTML 捕获阶段`)
+        },true)
+        document.body.addEventListener('click',()=>{
+            console.log(`==> body 捕获阶段`)
+        },true)
+        oDiv.addEventListener('click',(e)=>{
+            console.log(`==> div 捕获阶段`)
+            e.stopPropagation() //停止
+            // e.stopImmediatePropagation()  //停止之后所有的事件
+        },true)
+// // // // //
+    document.body.addEventListener('click',()=>{    
+        console.log("body xxxx")
+    })
+        window.addEventListener('click',()=>{
+            console.log(`==> window 冒泡阶段`)
+        })
+        document.addEventListener('click',()=>{
+            console.log(`==> document 冒泡阶段`)
+        })
+        document.documentElement.addEventListener('click',()=>{
+            console.log(`==> HTML 冒泡阶段`)
+        })
+        document.body.addEventListener('click',()=>{
+            console.log(`==> body 冒泡阶段`)
+        })
+        oDiv.addEventListener('click',()=>{
+            console.log(`==> div 冒泡阶段`)
+        })
+        
+    </script>
+</body>
+</html>

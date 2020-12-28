@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button id="myButton">click me</button>
+    </div>
+    <script>
+        const box = document.querySelector("#box")
+        const button = document.querySelector("#myButton")
+
+        const boxCallback=(e)=>{
+            console.log(`envent.type:${e.type}`)
+            console.log(`envent.target:${e.target.tagName}`)
+            console.log(`envent.currentTarget:${e.currentTarget}`)
+            console.log()
+        }
+        box.addEventListener('click',boxCallback)
+    </script>
+</body>
+</html>

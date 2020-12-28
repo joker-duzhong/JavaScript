@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div id="myDiv" name="div1" class="test1"><p id="myPara">test</p></div>
+    <script>
+        const oDiv=document.getElementById('myDiv')//得到一个节点
+        const oDiv1=document.getElementsByName('div1')//以下得到节点列表
+        const oDiv2=document.getElementsByTagName('div')
+        const oDiv3=document.getElementsByClassName('test1')//以上是动态节点
+
+        const oDiv4=document.querySelectorAll('#myDiv')//静态节点，得到节点列表
+        const oDiv5=document.querySelector('#myDiv')//静态节点，得到一个节点
+
+        console.log(oDiv,oDiv1,oDiv2,oDiv3)
+        console.log(oDiv4,oDiv5)
+        const oPara=oDiv.querySelector('#myPara')
+    </script>
+</body>
+</html>

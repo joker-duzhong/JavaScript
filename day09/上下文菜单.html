@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      border: 1px sienna solid;
+    }
+    #menu{
+      /* display: none; */
+      visibility: hidden;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    Lorem ipsum dolor sit amet.
+  </div>
+  <ul id="menu">
+    <li>Zengjia</li>
+    <li>删除</li>
+    <li>修改</li>
+    <li>查询</li>
+  </ul>
+
+  <script>
+    window.addEventListener('load',()=>{
+      
+      const oDiv = document.querySelector('div')
+      const menu = document.querySelector('#menu')
+
+      oDiv.addEventListener('contextmenu',(e)=>{
+        e.preventDefault()
+        
+        menu.style.top = e.clientY-20 + 'px'
+        menu.style.left = e.clientX + 'px'
+        menu.style.visibility = 'visible'
+      })
+      menu.addEventListener('mouseout',(e)=>{
+        e.target.style.visibility = 'hidden'
+      })
+
+    })
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鼠标事件实例</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      background-color: beige;
+      text-align: center;
+      line-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div>test</div>
+  <script>
+    const oDiv = document.querySelector('div')
+
+    oDiv.addEventListener('click',()=>{
+      console.log('==>click')
+    })
+    oDiv.addEventListener('dblclick',()=>{
+      console.log('==>dbclick')
+    })
+    oDiv.addEventListener('mouseover',()=>{
+      console.log('==>mousedown')
+    })
+    oDiv.addEventListener('mouseup',()=>{
+      console.log('==>mouseup')
+    })
+    oDiv.addEventListener('mouseover',()=>{
+      console.log('==>mouseover')
+    })
+    oDiv.addEventListener('mouseout',()=>{
+      console.log('==>mouseout')
+    })
+    oDiv.addEventListener('mouseleave',()=>{
+      console.log('==>mouseleave')
+    })
+  
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">test</div>
+    <script>
+        /*
+        三种for循环
+        for     => 传统的for循环
+        for  of => 数组集合map等可以遍历的、
+        for  in => 对象的属性
+        */
+        const box = document.querySelector("#box")
+        const callback = (e) =>{
+            console.log(e)
+            for(let prop in e){
+                console.log(prop)
+            }
+        }
+        box.addEventListener('click',callback)
+
+        //自定义事件
+
+        // 创建一个自定义对象
+        const helloEvent = new Event("hello",{bubbles:true,cancelable:false})
+        //事件回调函数
+        const helloCallback = (event)=>{
+            box.textContent = "hello ,event"
+        }
+        box.addEventListener('hello',helloCallback)
+
+        document.body.addEventListener('hello',(e)=>{
+            console.log("HELLO")
+            console.log(e.isTrusted)
+        },true)
+        //事件触发方式
+        box.dispatchEvent(helloEvent)
+    </script>
+</body>
+</html>

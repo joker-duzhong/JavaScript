@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #colorPicker{
+            width:50px;
+            height: 17px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="books">
+        <li >java</li>
+        <li >python</li>
+    </ul>
+    <input type="text" id="bookName">
+    <button id="btnAdd" >+</button>
+    <button id="btnDel">-</button>
+    <input type="color" id="colorPicker" value="#00000">
+    <script>
+        //获取按键
+        const books = document.querySelector("#books")
+        const bookName = document.querySelector("#bookName")
+        const btnAdd = document.querySelector("#btnAdd")
+        const btnDel = document.querySelector("#btnDel")
+        const colorPicker = document.querySelector('#colorPicker')
+
+        //添加函数
+        const addBooks = () =>{
+            const oElement = document.createElement('li')
+            const oText = document.createTextNode(bookName.value)
+            oElement.appendChild(oText)
+            // 添加颜色
+            
+            oElement.setAttribute("style",`color:${colorPicker.value}`)
+            books.appendChild(oElement)
+            bookName.value = ''
+        }
+        //删除函数
+        const delBooks = () =>{
+            books.removeChild(books.lastElementChild)
+        }
+        //添加事件监听器
+        btnAdd.addEventListener("click", addBooks)
+        btnDel.addEventListener("click", delBooks)
+    </script>
+</body>
+</html>

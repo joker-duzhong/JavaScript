@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      border: 1px seagreen solid;
+    }
+  </style>
+</head>
+<body>
+  <div>test</div>
+  <script>
+    const oDiv = document.querySelector('div')
+    oDiv.addEventListener('mousedown',(e)=>{
+      e.preventDefault()
+      oDiv.textContent = `你按了鼠标的${e.button}`
+      oDiv.textContent = `你按几个鼠标的${e.buttons}`
+      oDiv.textContent = `Ctrl:${e.ctrlKey}`
+      // oDiv.textContent = `Alt:${e.altKey}`
+      // oDiv.textContent = `meta:${e.metaKey}`
+    })
+  </script>
+</body>
+</html>

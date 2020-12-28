@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>异步</title>
+</head>
+<body>
+  <div></div>
+
+  <script>
+    const callback = function(){
+      console.log('hello,timeout:')
+    }
+    const a = setTimeout(callback,3000)
+    
+    console.log('同步执行！')
+    console.log(a)
+    clearTimeout(a)
+    let b = setInterval(callback,3000)
+  </script>
+</body>
+</html>

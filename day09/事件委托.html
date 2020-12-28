@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <ul id="list">
+    <li>JavaScript</li>
+    <li>Python</li>
+    <li></li>
+    <li></li>
+  </ul>
+  <script>
+    // MouseEvent/mouseout
+    const oList = document.querySelector('#list')
+
+    oList.addEventListener('mouseover',(e)=>{
+      if(e.target != e.currentTarget){
+        e.target.classList.add('box')
+      }
+    })
+    oList.addEventListener('mouseout',(e)=>{
+      e.target.classList.remove('box')
+    })
+  </script>
+</body>
+</html>

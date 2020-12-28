@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bg{
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <form action="#">
+    <input type="text">
+  </form>
+  <script>
+    // const oInput = document.querySelector('input')
+    // oInput.addEventListener('focus',(e)=>{
+    //   oInput.classList.add('bg')
+    // })
+    
+    // oInput.addEventListener('blur',()=>{
+    //   oInput.classList.remove('bg')
+    // })
+
+    
+// 冒泡版本
+    const oInput = document.querySelector('input')
+    oInput.addEventListener('focusin',(e)=>{
+      oInput.classList.add('bg')
+    })
+    oInput.addEventListener('focusout',()=>{
+      oInput.classList.remove('bg')
+    })
+  </script>
+</body>
+</html>
